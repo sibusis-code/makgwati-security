@@ -90,12 +90,21 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(item);
     });
 
-    // Phone number click tracking (for analytics if needed)
+    // Phone number and WhatsApp click tracking (for analytics if needed)
     const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+    const whatsappLinks = document.querySelectorAll('a[href^="https://wa.me"]');
+    
     phoneLinks.forEach(link => {
         link.addEventListener('click', function() {
             // You can add analytics tracking here
             console.log('Phone number clicked:', this.getAttribute('href'));
+        });
+    });
+
+    whatsappLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // You can add analytics tracking here
+            console.log('WhatsApp link clicked:', this.getAttribute('href'));
         });
     });
 

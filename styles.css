@@ -560,6 +560,14 @@ body {
     color: #FF6B35;
 }
 
+.contact-detail a[href^="https://wa.me"]:hover {
+    color: #25d366;
+}
+
+.contact-detail .fa-whatsapp {
+    color: #25d366;
+}
+
 .registration-info {
     background: white;
     border-radius: 16px;
